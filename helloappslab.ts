@@ -1,2 +1,5 @@
-let hi : String = ("Hello appslab") 
-console.log(hi);
+function distance(stepHeigh,towerHeigh,stepLenght) 
+{
+    return (towerHeigh / stepHeigh) * (stepHeigh + stepLenght)   
+} 
+console.log(distance(0.2,100,0.4))
