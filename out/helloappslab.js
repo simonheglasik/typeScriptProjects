@@ -1,15 +1,72 @@
-function minMaxDifference(numbers) {
-    var min = Number.MAX_VALUE;
-    var max = Number.MIN_VALUE;
-    for (var i = 0; i < numbers.length; i++) {
-        if (numbers[i] < min)
-            min = numbers[i];
-        if (numbers[i] > max)
-            max = numbers[i];
+var Student = /** @class */ (function () {
+    function Student(name, number, phoneNumber, adress) {
+        this.name = name;
+        this.number = number;
+        this.phoneNumber = phoneNumber;
+        this.adress = adress;
     }
-    console.log(min);
-    console.log(max);
-    return max - min;
-}
-console.log(minMaxDifference([10, 2, 3, 5, 9, -4, -5]));
+    Object.defineProperty(Student.prototype, "getName", {
+        get: function () {
+            return this.name;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Student.prototype, "setName", {
+        set: function (name) {
+            this.name = name;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Student.prototype, "getNumber", {
+        get: function () {
+            return this.number;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Student.prototype, "setNumber", {
+        set: function (number) {
+            this.number = number;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Student.prototype, "getPhoneNumber", {
+        get: function () {
+            return this.phoneNumber;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Student.prototype, "setPhoneNumber", {
+        set: function (number) {
+            this.phoneNumber = number;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Student.prototype, "getAdress", {
+        get: function () {
+            return this.adress;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Student.prototype, "setAdress", {
+        set: function (adress) {
+            this.adress = adress;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return Student;
+}());
+var student1 = new Student("Sam", 1, 987424514, " Legionarska 1, 01001 Zilina");
+var student2 = new Student("John", 2, 987425891, " Legionarska 2, 10001 Zilina");
+var students = [student1, student2];
+students.forEach(function (item) {
+    console.log(item.getName + " " + item.getNumber + " " + item.getPhoneNumber + " " + item.getAdress);
+});
 //# sourceMappingURL=helloappslab.js.map
