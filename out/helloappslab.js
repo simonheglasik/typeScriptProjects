@@ -1,15 +1,10 @@
-function minMaxDifference(numbers) {
-    var min = Number.MAX_VALUE;
-    var max = Number.MIN_VALUE;
-    for (var i = 0; i < numbers.length; i++) {
-        if (numbers[i] < min)
-            min = numbers[i];
-        if (numbers[i] > max)
-            max = numbers[i];
+var Student = /** @class */ (function () {
+    function Student(name, studentNumber) {
+        this.name = name;
+        this.studentNumber = studentNumber;
     }
-    console.log(min);
-    console.log(max);
-    return max - min;
-}
-console.log(minMaxDifference([10, 2, 3, 5, 9, -4, -5]));
+    return Student;
+}());
+var student = new Student("Jano", 12345);
+console.log(student.name + " " + student.studentNumber);
 //# sourceMappingURL=helloappslab.js.map
